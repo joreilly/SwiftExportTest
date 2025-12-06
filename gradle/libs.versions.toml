@@ -1,0 +1,9 @@
+[versions]
+junit = "4.13.2"
+kotlin = "2.3.20-dev-6091"
+
+[libraries]
+
+
+[plugins]
+kotlinMultiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
