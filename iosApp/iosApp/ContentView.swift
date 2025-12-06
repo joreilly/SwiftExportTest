@@ -19,13 +19,14 @@ struct ContentView: View {
 }
 
 struct SomeOtherView: View {
+    @State private var greeting = ""
     var body: some View {
         VStack {
-            Text("hi")
+            Text(greeting)
         }
         .task {
             do {
-                let greeting = try await Greeting().suspendGreet()
+                greeting = try await Greeting().suspendGreet()
                 print(greeting)
             } catch {
                 print("Failed to get greeting: \(error)")
