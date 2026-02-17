@@ -1,4 +1,3 @@
-import org.jetbrains.kotlin.gradle.plugin.mpp.apple.swiftexport.SWIFT_EXPORT_COROUTINES_SUPPORT_TURNED_ON
 import org.jetbrains.kotlin.gradle.swiftexport.ExperimentalSwiftExportDsl
 
 plugins {
@@ -14,10 +13,6 @@ kotlin {
     swiftExport {
         moduleName = "Shared"
         flattenPackage = "dev.johnoreilly.swiftexport"
-
-        configure {
-            settings.put(SWIFT_EXPORT_COROUTINES_SUPPORT_TURNED_ON, "true")
-        }
     }
 
     sourceSets {
