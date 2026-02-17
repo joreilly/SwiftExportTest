@@ -15,6 +15,16 @@ struct ContentView: View {
             }
             .navigationTitle("First View")
         }
+        .task {
+            let g = Greeting()
+            do {
+                for try await v in g.flowTest() {
+                    print(v)
+                }
+            } catch {
+                print("Failed to iterate greetings: \(error)")
+            }
+        }
     }
 }
 
