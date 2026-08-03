@@ -35,7 +35,7 @@ struct ContentView: View {
             streamedValues.removeAll()
             let g = Greeting()
             do {
-                for try await v in g.flowTest() {
+                for try await v in g.flowTest().asAsyncSequence() {
                     print(v)
                     streamedValues.append(v)
                 }
