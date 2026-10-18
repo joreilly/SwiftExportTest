@@ -21,6 +21,13 @@
         "gradle"
       ],
       "allowedVersions": "<9.7"
+    },
+    {
+      "description": "The Kotlin dev repository (redirector.kotlinlang.org/maven/dev) also publishes internal builds such as 2.5.0-saturn-677, which Renovate treats as releases but which can't build (no matching kotlin-native-prebuilt). Keep following the 2.5.0-Beta2-* dev builds, but skip those.",
+      "matchPackageNames": [
+        "/^org\\.jetbrains\\.kotlin[.:]/"
+      ],
+      "allowedVersions": "!/saturn/"
     }
   ]
 }
