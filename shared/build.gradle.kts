@@ -10,9 +10,12 @@ kotlin {
     iosSimulatorArm64()
 
     @OptIn(ExperimentalSwiftExportDsl::class)
-    swiftExport {
-        moduleName = "Shared"
-        flattenPackage = "dev.johnoreilly.swiftexport"
+    export {
+        swift {
+            moduleName = "Shared"
+            rootPackage = "dev.johnoreilly.swiftexport"
+            xcodeIntegration()
+        }
     }
 
     sourceSets {
