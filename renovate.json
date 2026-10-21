@@ -5,7 +5,7 @@
   ],
   "packageRules": [
     {
-      "description": "AGP 9.3.x+ outruns what the locally installed Android Studio supports — sync fails with unsupported-AGP-version and \"could not find compile target\" errors. Hold AGP updates until Studio's bundled support catches up.",
+      "description": "AGP 9.3.x+ outruns what the locally installed Android Studio supports \u2014 sync fails with unsupported-AGP-version and \"could not find compile target\" errors. Hold AGP updates until Studio's bundled support catches up.",
       "matchPackageNames": [
         "com.android.tools.build:gradle",
         "/^com\\.android\\.[a-z.]+:com\\.android\\.[a-z.]+\\.gradle\\.plugin$/"
@@ -21,13 +21,6 @@
         "gradle"
       ],
       "allowedVersions": "<9.7"
-    },
-    {
-      "description": "The Kotlin dev repository (redirector.kotlinlang.org/maven/dev) also publishes internal builds such as 2.5.0-saturn-677, which Renovate treats as releases but which can't build (no matching kotlin-native-prebuilt). Keep following the 2.5.0-Beta2-* dev builds, but skip those.",
-      "matchPackageNames": [
-        "/^org\\.jetbrains\\.kotlin[.:]/"
-      ],
-      "allowedVersions": "!/saturn/"
     }
   ]
 }

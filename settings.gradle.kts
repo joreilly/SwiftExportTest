@@ -12,7 +12,6 @@ pluginManagement {
         }
         mavenCentral()
         gradlePluginPortal()
-        maven("https://redirector.kotlinlang.org/maven/dev")
     }
 }
 
@@ -26,7 +25,6 @@ dependencyResolutionManagement {
             }
         }
         mavenCentral()
-        maven("https://redirector.kotlinlang.org/maven/dev")
     }
 }
 
